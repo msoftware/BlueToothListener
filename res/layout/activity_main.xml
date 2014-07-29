@@ -1,15 +1,41 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
+        android:id="@+id/connected_title_tv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="监听蓝牙状态" />
+        android:background="#AAFFFF00"
+        android:text="@string/connected"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/font_small" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/connected_device_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/device_name"
+        android:paddingLeft="@dimen/padding_large"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <TextView
+        android:id="@+id/devices_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AAFFFF00"
+        android:text="@string/device_list"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/font_small" />
+
+    <ListView
+        android:id="@+id/devices_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,6 +1,6 @@
 
 
-package com.example.bluetooth;
+package com.jackie.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -17,37 +17,37 @@ public class BlueToothReceiver extends BroadcastReceiver
 	//private BluetoothAdapter mBluetoothAdapter;
 	//private BluetoothDevice btDevice;
 	private String btMessage="";
-	//¼àÌýÀ¶ÑÀ×´Ì¬
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
 
 	@Override
 	public void onReceive(Context context, Intent intent)
 	{
         String action = intent.getAction();
         BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-        //Toast.makeText(context, "À¶ÑÀ×´Ì¬¸Ä±ä¹ã²¥ !", Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, "ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½Ä±ï¿½ã²¥ !", Toast.LENGTH_LONG).show();
 
         
-        Log.i("TAG---BlueTooth","½ÓÊÕµ½À¶ÑÀ×´Ì¬¸Ä±ä¹ã²¥£¡£¡");
+        Log.i("TAG---BlueTooth","ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½Ä±ï¿½ã²¥ï¿½ï¿½ï¿½ï¿½");
         if(BluetoothDevice.ACTION_FOUND.equals(action)) 
         {
-            Toast.makeText(context, device.getName() + " Éè±¸ÒÑ·¢ÏÖ£¡£¡", Toast.LENGTH_LONG).show();
-            btMessage=device.getName()+"Éè±¸ÒÑ·¢ÏÖ£¡£¡";
+            Toast.makeText(context, device.getName() + " ï¿½è±¸ï¿½Ñ·ï¿½ï¿½Ö£ï¿½ï¿½ï¿½", Toast.LENGTH_LONG).show();
+            btMessage=device.getName()+"ï¿½è±¸ï¿½Ñ·ï¿½ï¿½Ö£ï¿½ï¿½ï¿½";
         }
         else if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) 
         {
-            Toast.makeText(context, device.getName() + "ÒÑÁ¬½Ó", Toast.LENGTH_LONG).show();
-            btMessage=device.getName()+"Éè±¸ÒÑÁ¬½Ó£¡£¡";
+            Toast.makeText(context, device.getName() + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_LONG).show();
+            btMessage=device.getName()+"ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½";
         }
         
         else if (BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED.equals(action)) 
         {
-            Toast.makeText(context, device.getName() + "ÕýÔÚ¶Ï¿ªÀ¶ÑÀÁ¬½Ó¡£¡£¡£", Toast.LENGTH_LONG).show();
-            btMessage=device.getName()+"ÕýÔÚ¶Ï¿ªÀ¶ÑÀÁ¬½Ó¡£¡£¡£";
+            Toast.makeText(context, device.getName() + "ï¿½ï¿½ï¿½Ú¶Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_LONG).show();
+            btMessage=device.getName()+"ï¿½ï¿½ï¿½Ú¶Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½";
         }
         else if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) 
         {
-            Toast.makeText(context, device.getName() + "À¶ÑÀÁ¬½ÓÒÑ¶Ï¿ª£¡£¡£¡", Toast.LENGTH_LONG).show();
-            btMessage=device.getName()+"À¶ÑÀÁ¬½ÓÒÑ¶Ï¿ª£¡£¡";
+            Toast.makeText(context, device.getName() + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_LONG).show();
+            btMessage=device.getName()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½";
         }     
 		
         
