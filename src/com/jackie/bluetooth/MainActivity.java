@@ -1,17 +1,11 @@
 package com.jackie.bluetooth;
 
-import java.util.ArrayList;
-
-import com.example.bluetooth.R;
-
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
