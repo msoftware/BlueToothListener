@@ -16,17 +16,9 @@ public class BlueToothReceiver extends BroadcastReceiver {
 				.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 		if (BluetoothDevice.ACTION_FOUND.equals(action)) {
 		} else if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-		}
-
-		else if (BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED.equals(action)) {
+		}else if (BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED.equals(action)) {
 		} else if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
 		}
-
-		intent.putExtra("Bluetooth", btMessage);
-		intent.setClass(context, MainActivity.class);
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		context.startActivity(intent);
-
 	}
 
 }

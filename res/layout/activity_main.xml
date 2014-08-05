@@ -16,7 +16,7 @@
         android:textSize="@dimen/font_small" />
 
     <TextView
-        android:id="@+id/connected_device_name_tv"
+        android:id="@+id/device_name_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/device_name"
